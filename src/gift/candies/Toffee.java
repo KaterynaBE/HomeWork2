@@ -1,14 +1,20 @@
 package gift.candies;
 
+/**
+ * Class Toffee represent one candy of type Toffee inside package of sweets (Gift).
+ */
+
 public class Toffee extends Candy {
 
-    public Toffee(String name, int count, double weighOfSingleCandy) {
+    protected double gluconatPercentage;
+
+    public Toffee(String name, int weigh, double gluconatPercentage) {
         this.name = name;
-        this.count = count;
-        this.weightOfSingleCandy = weighOfSingleCandy;
+        this.weight = weigh;
+        this.gluconatPercentage = gluconatPercentage;
     }
 
-//    public double calculateToffeesWeight() {
-//        return this.getWeightOfSingleCandy() * this.getCount();
-//    }
+    public double getGluconatePercentage() {
+        return gluconatPercentage;
+    }
 }

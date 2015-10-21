@@ -1,21 +1,40 @@
 import gift.candies.*;
 import gift.Gift;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class App {
     public static void main(String[] arg) {
 
         // Created  few candies objects.
-        // ? or just ars candy1 = new Mars();
-        Mars candies1 = new Mars("Mars", 10, 15.2);
-        Lollipop candies2 = new Lollipop("Lollipop", 8, 10.2);
-        Toffee candies3 = new Toffee("Toffee", 14, 8.7);
+        Mars mars = new Mars("Mars", 15, 20.5);
+        Lollipop lollipop = new Lollipop("Lollipop", 10, 30.12);
+        Toffee toffee = new Toffee("Toffee", 8, 18.56);
 
-        // Create gift ?
-        Gift gift1 = new Gift();
-        gift1.add(candies1);
-        gift1.add(candies2);
-        gift1.add(candies3);
+        // Create gift.
+        Gift gift = new Gift();
+        gift.add(mars);
+        gift.add(lollipop);
+        gift.add(toffee);
 
+        // where should this be placed?
+//        class WeightComparator implements Comparator<Candy> {
+//
+//            @Override
+//            public int compare(Candy c1, Candy c2) {
+//                if (c1.getWeight() < c2.getWeight()) {
+//                    return 1;
+//                } else {
+//                    return -1;
+//                }
+//            }
+//        }
 
+        // not clear why it does not accept 'candies'
+        Collections.sort(candies, new WeigthComparator());
+        System.out.println("Sorted list entries: ");
+        for(Candy c: candies){
+            System.out.println(c);
     }
 }

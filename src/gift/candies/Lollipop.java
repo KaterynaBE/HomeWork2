@@ -1,13 +1,24 @@
 package gift.candies;
 
+
+/**
+ * Class Lollipop represent one candy of type Lollipop inside package of sweets (Gift).
+ */
+
 public class Lollipop extends Candy {
-    public Lollipop(String name, int count, double weighOfSingleCandy) {
+
+    protected double sugarPercentage;
+
+    public Lollipop(String name, int weight, double sugarPercentage) {
         this.name = name;
-        this.count = count;
-        this.weightOfSingleCandy = weighOfSingleCandy;
+        this.weight = weight;
+        // super(name, weight); - 'super' is red. how to make it work and is it
+        this.sugarPercentage = sugarPercentage;
     }
 
-//    public double calculateLollipopsWeight() {
-//        return this.getWeightOfSingleCandy() * this.getCount();
-//    }
+    // ? not yet used on any place
+    public double getSugarPercentage() {
+        return sugarPercentage;
+    }
+
 }
