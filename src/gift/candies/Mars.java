@@ -9,8 +9,7 @@ public class Mars extends Candy {
     protected double chocolatePercentage;
 
     public Mars(String name, int weight, double chocolatePercentage) {
-        this.name = name;
-        this.weight = weight;
+        super(name, weight);
         this.chocolatePercentage = chocolatePercentage;
     }
 

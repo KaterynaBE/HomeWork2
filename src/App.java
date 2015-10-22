@@ -1,8 +1,7 @@
 import gift.candies.*;
 import gift.Gift;
+import java.util.Scanner;
 
-import java.util.Collections;
-import java.util.Comparator;
 
 public class App {
     public static void main(String[] arg) {
@@ -18,23 +17,17 @@ public class App {
         gift.add(lollipop);
         gift.add(toffee);
 
-        // where should this be placed?
-//        class WeightComparator implements Comparator<Candy> {
-//
-//            @Override
-//            public int compare(Candy c1, Candy c2) {
-//                if (c1.getWeight() < c2.getWeight()) {
-//                    return 1;
-//                } else {
-//                    return -1;
-//                }
-//            }
-//        }
-
-        // not clear why it does not accept 'candies'
-        Collections.sort(candies, new WeigthComparator());
-        System.out.println("Sorted list entries: ");
-        for(Candy c: candies){
-            System.out.println(c);
+    //Creating Scanner instance to scan console for User input
+    Scanner in = new Scanner(System.in);
+    System.out.println("Type 1 followed by <Enter> to see Gift weight, type 2 + Enter to see list of " +
+            "candies which corresponds to particular weight range, type 0 + Enter to Exit.");
+    int number = in.nextInt();
+        if (number == 1) {
+            System.out.println(gift.calculateGiftWeight());
+        } else if (number == 2) {
+            System.out.println(gift.findCandy(10, 12));
+        } else if (number == 0) {
+            return;
+        }
     }
 }

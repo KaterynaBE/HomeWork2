@@ -1,5 +1,6 @@
 package gift.candies;
 
+import java.lang.IllegalArgumentException;
 
 /**
  * Class Lollipop represent one candy of type Lollipop inside package of sweets (Gift).
@@ -7,12 +8,13 @@ package gift.candies;
 
 public class Lollipop extends Candy {
 
-    protected double sugarPercentage;
+    private double sugarPercentage;
 
     public Lollipop(String name, int weight, double sugarPercentage) {
-        this.name = name;
-        this.weight = weight;
-        // super(name, weight); - 'super' is red. how to make it work and is it
+//        if (!textHasContent(name)) {
+//            throw new IllegalArgumentException("Name has no content.");
+//        }
+        super(name, weight);
         this.sugarPercentage = sugarPercentage;
     }
 
@@ -20,5 +22,8 @@ public class Lollipop extends Candy {
     public double getSugarPercentage() {
         return sugarPercentage;
     }
-
+//    private boolean textHasContent(String text) {
+//        String EMPTY_STRING = "";
+//        return (text != null) && (!text.trim().equals(EMPTY_STRING));
+//    }
 }

@@ -8,9 +8,8 @@ public class Toffee extends Candy {
 
     protected double gluconatPercentage;
 
-    public Toffee(String name, int weigh, double gluconatPercentage) {
-        this.name = name;
-        this.weight = weigh;
+    public Toffee(String name, int weight, double gluconatPercentage) {
+        super(name, weight);
         this.gluconatPercentage = gluconatPercentage;
     }
 
