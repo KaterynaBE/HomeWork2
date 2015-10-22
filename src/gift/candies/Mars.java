@@ -6,11 +6,15 @@ package gift.candies;
 
 public class Mars extends Candy {
 
-    protected double chocolatePercentage;
+    private double chocolatePercentage;
 
     public Mars(String name, int weight, double chocolatePercentage) {
         super(name, weight);
         this.chocolatePercentage = chocolatePercentage;
+
+        if (isPercentagePositive(chocolatePercentage)) {
+            throw new IllegalArgumentException("Percentage of chocolate can not be negative number.");
+        }
     }
 
     public double getChocolatePercentage() {

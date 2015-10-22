@@ -19,6 +19,9 @@ public class Candy implements Comparable<Candy>{
         if (!textHasContent(name)) {
             throw new IllegalArgumentException("Name has no content.");
         }
+        if (isPositiveNumber(weight)) {
+            throw new IllegalArgumentException("Weight should be positive number.");
+        }
     }
 
     public String toString() {
@@ -41,8 +44,16 @@ public class Candy implements Comparable<Candy>{
         return this.weight - compareWeight;
     }
 
+//    Arrays.sort(candies)
+
     private boolean textHasContent(String text) {
         String EMPTY_STRING = "";
         return (text != null) && (!text.trim().equals(EMPTY_STRING));
+    }
+    private boolean isPositiveNumber(int number) {
+        return (number < 0);
+    }
+    protected boolean isPercentagePositive(double percent) {
+        return (percent >= 0.0);
     }
 }
