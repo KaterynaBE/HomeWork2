@@ -15,8 +15,7 @@ public class Gift {
 
     private List<Candy> candies = new ArrayList<>();
 
-    // ! check all access modificators -> no need on privates almost nowhere
-    public void add (Candy candy) {
+    public void add(Candy candy) {
         candies.add(candy);
     }
 
@@ -31,8 +30,8 @@ public class Gift {
         return weightGift;
     }
 
-    // Finding list of candies whose weight corresponds to specified one.
-    public List<Candy> findCandy(int minWeight, int maxWeight) throws ParametersMismatchException {
+    // Finding list of candies with weight corresponds to specified one.
+    public List<Candy> findCandies(int minWeight, int maxWeight) throws ParametersMismatchException {
         if (minWeight > maxWeight)
         {
             throw new ParametersMismatchException("Error: minimal weight should be bigger than maximal." ) ;

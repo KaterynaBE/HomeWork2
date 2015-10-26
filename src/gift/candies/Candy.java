@@ -1,7 +1,5 @@
 package gift.candies;
 
-import java.util.*;
-
 
 /**
  * Class Candy represents one candy of single type in Gift.
@@ -39,7 +37,6 @@ public class Candy implements Comparable<Candy>{
     public int compareTo(Candy compareCandy) {
 
         int compareWeight = ((Candy) compareCandy).getWeight();
-        //int compareWeight = compareCandy.getWeight();
 
         //ascending order
         return this.weight - compareWeight;
@@ -53,7 +50,7 @@ public class Candy implements Comparable<Candy>{
     private boolean isPositiveNumber(int number) {
         return (number < 0);
     }
-    
+
     protected boolean isPercentagePositive(double percent) {
         return (percent <= 0.0);
     }

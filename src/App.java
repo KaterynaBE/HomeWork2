@@ -5,7 +5,6 @@ import gift.exceptions.InputCommandException;
 import gift.exceptions.ParametersMismatchException;
 
 import java.util.Scanner;
-import java.util.*;
 
 
 public class App {
@@ -30,9 +29,8 @@ public class App {
     int number = in.nextInt();
         if (number == 1) {
             System.out.println(gift.calculateGiftWeight());
-            //System.out.println(Arrays.sort(gift, candy.compareTo());
         } else if (number == 2) {
-            System.out.println(gift.findCandy(10, 12));
+            System.out.println(gift.findCandies(10, 12));
         } else if (number == 3) {
             gift.sortCandies();
             System.out.println(gift.getCandies());
