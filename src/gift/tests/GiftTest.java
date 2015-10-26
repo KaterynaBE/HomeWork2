@@ -9,6 +9,11 @@ import org.junit.*;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
+
 
 /**
  * jUnit tests for Gift class.
@@ -18,11 +23,12 @@ public class GiftTest {
     @BeforeClass
     public static void setUpClass() throws Exception {
         System.out.println("\nSETUP CLASS RUNNING");
+        Gift gift = new Gift();
     }
 
     @AfterClass
     public static void tearDownClass() throws Exception {
-        System.out.println("\nTEARDOWN CLASS RUNNING  for testCalculateGiftWeight test");
+        System.out.println("\nTEARDOWN CLASS RUNNING");
     }
 
     @Before
@@ -35,6 +41,7 @@ public class GiftTest {
     public void tearDown() throws Exception {
         System.out.println("\nTEARDOWN IS RUNNING");
     }
+
 
     @Test
     public void testCalculateGiftWeight() throws Exception {
@@ -49,6 +56,7 @@ public class GiftTest {
         gift.add(toffee);
         assertEquals(39, gift.calculateGiftWeight());
     }
+
 
     @Test(expected=IllegalArgumentException.class)
     public void testAddCandyWithNegativeWeight() {
