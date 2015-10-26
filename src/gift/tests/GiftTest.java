@@ -1,5 +1,6 @@
-package gift;
+package gift.tests;
 
+import gift.Gift;
 import gift.candies.Candy;
 import gift.candies.Lollipop;
 import gift.candies.Mars;
@@ -21,8 +22,9 @@ public class GiftTest {
 
     @AfterClass
     public static void tearDownClass() throws Exception {
-        System.out.println("\nTEARDOWN CLASS RUNNING");
+        System.out.println("\nTEARDOWN CLASS RUNNING  for testCalculateGiftWeight test");
     }
+
     @Before
     public void setUp() throws Exception {
         System.out.println("\nSETUP IS RUNNING");
