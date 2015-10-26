@@ -48,6 +48,11 @@ public class Gift {
         return searchedCandies;
     }
 
-//    ArrayList<Candy> sortedCandies = new ArrayList();
-//    Arrays.sort(candies);
+    public void sortCandies() {
+        Collections.sort(candies);
+    }
+
+    public List<Candy> getCandies() {
+        return candies;
+    }
 }

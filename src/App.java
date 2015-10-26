@@ -22,14 +22,6 @@ public class App {
         gift.add(lollipop);
         gift.add(toffee);
 
-// Go back to comparator!!!
-//        Arrays.sort(candies);
-
-//        int i=0;
-//        for(Candy temp: candies){
-//            System.out.println("candies " + ++i + " : " + temp.getName() +
-//                    ", Quantity : " + temp.getWeight());
-//        }
 
     //Creating Scanner instance to scan console for User input
     Scanner in = new Scanner(System.in);
@@ -38,12 +30,16 @@ public class App {
     int number = in.nextInt();
         if (number == 1) {
             System.out.println(gift.calculateGiftWeight());
+            //System.out.println(Arrays.sort(gift, candy.compareTo());
         } else if (number == 2) {
             System.out.println(gift.findCandy(10, 12));
+        } else if (number == 3) {
+            gift.sortCandies();
+            System.out.println(gift.getCandies());
         } else if (number == 0) {
             return;
-        } else if (number !=1 || number !=2 || number !=3) {
-            throw new InputCommandException("Error. Input should be 1, 2 or 0 only.");
+        } else {
+            throw new InputCommandException("Error. Input should be 1, 2, 3 or 0 only.");
         }
     }
 }

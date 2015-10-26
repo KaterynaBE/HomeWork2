@@ -39,21 +39,22 @@ public class Candy implements Comparable<Candy>{
     public int compareTo(Candy compareCandy) {
 
         int compareWeight = ((Candy) compareCandy).getWeight();
+        //int compareWeight = compareCandy.getWeight();
 
         //ascending order
         return this.weight - compareWeight;
     }
 
-//    Arrays.sort(candies)
-
     private boolean textHasContent(String text) {
         String EMPTY_STRING = "";
         return (text != null) && (!text.trim().equals(EMPTY_STRING));
     }
+
     private boolean isPositiveNumber(int number) {
         return (number < 0);
     }
+    
     protected boolean isPercentagePositive(double percent) {
-        return (percent >= 0.0);
+        return (percent <= 0.0);
     }
 }
