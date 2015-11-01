@@ -63,6 +63,5 @@ public class ParametrizedGiftTest {
     public void testFindCandies() {
         List<Candy> actualCandies = gift.findCandies(minWeight, maxWeight);
         assertEquals(quantityOfCandies, actualCandies.size());
-
     }
 }
