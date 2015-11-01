@@ -1,23 +1,13 @@
 package gift.exceptions;
 
-import java.lang.Exception;
+import java.lang.RuntimeException;
 
 /**
- * Created by ekaterinabut on 10/21/15.
+ * Exception raised in case if minimal weight is bigger than maximal for findCandies function.
  */
-public class ParametersMismatchException extends Exception {
-    public ParametersMismatchException() {
-    }
+public class ParametersMismatchException extends RuntimeException {
 
     public ParametersMismatchException(String message) {
         super (message);
-    }
-
-    public ParametersMismatchException(Throwable cause) {
-        super (cause);
-    }
-
-    public ParametersMismatchException(String message, Throwable cause) {
-        super (message, cause);
     }
 }

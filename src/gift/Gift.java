@@ -6,7 +6,6 @@ import gift.exceptions.ParametersMismatchException;
 import gift.exceptions.EmptyGiftException;
 
 
-
 /**
  * Class Gift represents created gift containing candies of different types.
  */

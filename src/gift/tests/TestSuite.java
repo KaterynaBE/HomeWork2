@@ -8,8 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 
 @RunWith(Suite.class)
-// List all test you want to include to this test suite through comma below. Now we have only 1 test class here.
-@SuiteClasses({GiftTest.class})
+
+@SuiteClasses({GiftTest.class, ParametrizedGiftTest.class})
 public class TestSuite {
 
     @AfterClass

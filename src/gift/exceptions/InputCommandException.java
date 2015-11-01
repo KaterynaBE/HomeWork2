@@ -1,25 +1,15 @@
 package gift.exceptions;
 
-import java.lang.Exception;
+import java.lang.RuntimeException;
 
 /**
- * Created by ekaterinabut on 10/21/15.
+ * Exception raised in case if user enters command to console other than suggested choices.
  */
 
-public class InputCommandException extends Exception {
-    public InputCommandException () {
-    }
+public class InputCommandException extends RuntimeException{
 
     public InputCommandException (String message) {
         super (message);
-    }
-
-    public InputCommandException (Throwable cause) {
-        super (cause);
-    }
-
-    public InputCommandException (String message, Throwable cause) {
-        super (message, cause);
     }
 }
 

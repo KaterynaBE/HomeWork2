@@ -1,24 +1,14 @@
 package gift.exceptions;
 
-import java.lang.Exception;
+import java.lang.RuntimeException;
 
 /**
- * Created by ekaterinabut on 10/21/15.
+ * Exception raised in case if gift weight is equal to zero.
  */
 
-public class EmptyGiftException extends Exception {
-    public EmptyGiftException () {
-    }
+public class EmptyGiftException extends RuntimeException {
 
     public EmptyGiftException (String message) {
         super (message);
-    }
-
-    public EmptyGiftException (Throwable cause) {
-        super (cause);
-    }
-
-    public EmptyGiftException (String message, Throwable cause) {
-        super (message, cause);
     }
 }
