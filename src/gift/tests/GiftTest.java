@@ -17,14 +17,8 @@ import static org.junit.Assert.*;
  */
 public class GiftTest {
 
-    // public List<Candy> candies = new ArrayList<>();
     public static Gift gift = null;
-
-//    public void add(Candy candy) {
-//        candies.add(candy);
-//    }
-
-
+    
     @Before
     public void setUp() {
         System.out.println("\nSETUP CLASS");
